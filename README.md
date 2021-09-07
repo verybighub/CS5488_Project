@@ -1,4 +1,4 @@
-# CS5488 Project
+# CS5488 Project - Price Prediction on Cryptocurrencies
 
 ## Objective
 In this project, we attempt to predict the exchange rates of cryptocurrencies using historical prices of other cryptocurrencies, by training a deep neural network distributedly across several machines.
