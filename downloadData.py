@@ -1,9 +1,5 @@
 '''
-Download data to JSON format
-'''
-
-'''
-TODO
+Download historical cryptocurrency market data to CSV format
 '''
 
 from time import sleep
@@ -57,7 +53,7 @@ def getData():
     del driver
 
     df.to_json('historical_coin_data.json')
-    df.to_excel('historical_coin_data.xlsx')
+    df.to_csv('historical_coin_data.csv')
 
 def testHvdInstallation():
     import horovod.spark.tensorflow as hvd
