@@ -39,16 +39,25 @@ def getData():
         driver.execute_script('window.scrollTo(0, 1000)')
         sleep(1)
         for _ in range(50):
-            driver.execute_script("$('#__next > div > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div:nth-child(2) > div > p:nth-child(3) > button').click()")
+            driver.execute_script("document.querySelector('#__next > div > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div > p:nth-child(3) > button').click()")
             sleep(2)
         soup=b(driver.page_source,'html.parser')
         coins = soup.select('#__next > div > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div > div.b4d71h-2.hgYnhQ > table > tbody > tr')
         rows = [x.findChildren('td') for x in coins]
         for row in rows:
-            print([cell.text for cell in row])  
+            myrow = [cell.text for cell in row]
+            myrow[0] = pd.to_datetime(myrow[0])
+            for x in range(1, len(myrow)):
+                myrow[x] = float(myrow[x].replace('$','').replace(',',''))
+            df.loc[len(df)] = [currency, *myrow]
+            # print([cell.text for cell in row])  
+        print(df)
 
     driver.quit()
     del driver
+
+    df.to_json('historical_coin_data.json')
+    df.to_excel('historical_coin_data.xlsx')
 
 def testHvdInstallation():
     import horovod.spark.tensorflow as hvd
