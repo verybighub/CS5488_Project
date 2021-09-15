@@ -34,9 +34,12 @@ def getData():
         driver.get(f'https://coinmarketcap.com/currencies/{currency.replace(" ","-").lower()}/historical-data/')
         driver.execute_script('window.scrollTo(0, 1000)')
         sleep(1)
-        for _ in range(50):
-            driver.execute_script("document.querySelector('#__next > div > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div > p:nth-child(3) > button').click()")
-            sleep(2)
+        try:
+            for _ in range(50):
+                driver.execute_script("document.querySelector('#__next > div > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div > p:nth-child(3) > button').click()")
+                sleep(2)
+        except:
+            pass
         soup=b(driver.page_source,'html.parser')
         coins = soup.select('#__next > div > div.main-content > div.sc-57oli2-0.comDeo.cmc-body-wrapper > div > div.sc-16r8icm-0.jKrmxw.container > div > div > div.b4d71h-2.hgYnhQ > table > tbody > tr')
         rows = [x.findChildren('td') for x in coins]
