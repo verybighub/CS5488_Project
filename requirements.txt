@@ -1,5 +1,3 @@
 beautifulsoup4
-horovod[tensorflow,keras,spark]
-tensorboard
 pandas
-selenium
+selenium-wire
