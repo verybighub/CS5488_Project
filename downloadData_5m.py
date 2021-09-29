@@ -32,7 +32,7 @@ def download():
 		'Polygon': 3890,
 		'TRON': 1958,
 		'Stellar': 512,
-		'Ethereum Classic': 1321
+		'Ethereum Classic': 1321,
 		'VeChain': 3077
 	}
 
