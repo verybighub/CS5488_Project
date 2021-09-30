@@ -15,3 +15,7 @@ To install the dependencies, enter the following in the command line:
 ```
 pip3 install -r requirements.txt
 ```
+
+## Reference
+
+https://medium.com/apache-mxnet/from-three-hours-to-25-minutes-our-journey-of-optimizing-mask-r-cnn-training-time-using-apache-774c59bcbb74
