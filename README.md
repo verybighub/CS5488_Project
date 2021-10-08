@@ -15,3 +15,9 @@ To install the dependencies, enter the following in the command line:
 ```
 pip3 install -r requirements.txt
 ```
+
+## Reference
+
+* [https://github.com/PacktPublishing/Distributed-Data-Systems-with-Azure-Databricks/blob/6a600f46968362a003f4a383699f93e67e1d81ba/Chapter12.ipynb](https://github.com/PacktPublishing/Distributed-Data-Systems-with-Azure-Databricks/blob/6a600f46968362a003f4a383699f93e67e1d81ba/Chapter12.ipynb)
+
+* [https://medium.com/apache-mxnet/from-three-hours-to-25-minutes-our-journey-of-optimizing-mask-r-cnn-training-time-using-apache-774c59bcbb74](https://medium.com/apache-mxnet/from-three-hours-to-25-minutes-our-journey-of-optimizing-mask-r-cnn-training-time-using-apache-774c59bcbb74)
