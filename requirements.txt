@@ -1,5 +1,6 @@
 pandas
 jupyter
 requests
+rise
 statsmodels
 pmdarima
