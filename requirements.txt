@@ -1,6 +1,10 @@
-pandas
+beautifulsoup4
 jupyter
-requests
-rise
-statsmodels
+pandas
 pmdarima
+requests
+# RISE is for presentation only
+rise
+# To use selenium, you need either Firefox Geckodriver or Chrome(-ium) Webdriver in your PATH
+selenium
+statsmodels
